@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.jumbotron {
+  background-image: url(https://raw.githubusercontent.com/birunidev/scrollMagicDemo/master/asset/jumbotron.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    background: rgba($color: #000000, $alpha: 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__content {
+    margin-top: -80px;
+    text-align: center;
+    width: 60%;
+    position: relative;
+    z-index: 2;
+
+    h1,
+    p,
+    button {
+      color: white;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-family: "Montserrat";
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: none;
+      border: 2px solid white;
+      font-family: "Poppins";
+      transition: 0.4s ease-out;
+      font-weight: 500;
+      outline: none;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+
+      &:active {
+        background: none;
+        color: white;
+      }
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section.best-products {
+  margin: 80px 0;
+
+  h2 {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.9s ease;
+
+    span {
+      color: #ce071d;
+    }
+  }
+
+  h2.fade-in,
+  p.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  p {
+    transition: 0.9s ease;
+    opacity: 0;
+    transform: translateY(150px);
+    color: #868686;
+    margin-bottom: 50px;
+  }
+
+  .product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+
+    .product__image {
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+
+      // border: 1px solid red;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      img {
+        transition: 0.4s ease-out;
+        width: 100%;
+      }
+    }
+
+    #image-1,
+    #image-2,
+    #image-3 {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    #image-1.show-up {
+      transition: 0.4s ease 0.5s;
+    }
+
+    #image-2.show-up {
+      transition: 0.4s ease 0.8s;
+    }
+
+    #image-3.show-up {
+      transition: 0.4s ease 1s;
+    }
+
+    #image-1.show-up,
+    #image-2.show-up,
+    #image-3.show-up {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+section.list {
+  font-size: 80px;
+  text-align: center;
+  min-height: 100vh;
+
+  h1#list__pack {
+    color: rgb(189, 15, 15);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  #list__pack.show-list {
+    transition: 0.6s ease;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,30 @@
+@media (max-width: 1070px) {
+  .shoe {
+    width: 115%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .card > div {
+    width: 100% !important;
+    box-shadow: none;
+  }
+
+  .shoe {
+    width: 100% !important;
+    bottom: -20px !important;
+    right: 20px !important;
+  }
+
+  .brand {
+    top: 20% !important;
+    left: 5% !important;
+    font-size: 9.5rem !important;
+  }
+}

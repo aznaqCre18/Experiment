@@ -1,8 +1,8 @@
 :root {
-  $primary: #eb2614;
+  --primary: #eb2614;
 }
 
-$primary: $primary;
+$primary: --primary;
 
 * {
   margin: 0;
@@ -234,7 +234,6 @@ body {
       .size-container {
         .sizes {
           padding: 5px 0;
-          padding-left: 10px;
           display: flex;
 
           .size {
@@ -303,3 +302,6 @@ body {
     }
   }
 }
+
+@import "./responsive.laptop";
+@import "./responsive.tablet.scss";

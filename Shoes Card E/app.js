@@ -5,6 +5,8 @@ const gradients = document.querySelectorAll(".gradient");
 
 const shoes = document.querySelectorAll(".shoe");
 
+const shoeBg = document.querySelector(".bg-image");
+
 let prevColor = "red";
 
 const changeSize = (e) => {
@@ -41,3 +43,20 @@ const changeColor = (e) => {
 
 sizes.forEach((size) => size.addEventListener("click", changeSize));
 colors.forEach((color) => color.addEventListener("click", changeColor));
+
+//responsive
+
+const x = window.matchMedia("(max-width: 1000px)");
+
+const changeHeight = () => {
+  if (x.matches) {
+    let shoeHeight = shoes[0].offsetHeight;
+    shoeBg.style.height = `${shoeHeight * 1.1}px`;
+  } else {
+    shoeBg.style.height = "475px";
+  }
+};
+
+changeHeight();
+
+window.addEventListener("resize", changeHeight);

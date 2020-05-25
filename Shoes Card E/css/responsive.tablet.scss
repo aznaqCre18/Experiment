@@ -1,0 +1,87 @@
+@media (max-width: 830px) {
+  .logo {
+    width: 70px !important;
+    top: 15px !important;
+    left: 15px !important;
+
+    img {
+      width: 80px !important;
+    }
+  }
+
+  .shoe {
+    transform: rotate(-5deg) !important;
+    right: 10px;
+  }
+
+  .card .bg-image .share {
+    width: 35px !important;
+    height: 35px !important;
+    top: 15px !important;
+    right: 15px !important;
+
+    i {
+      line-height: 35px !important;
+    }
+
+    &:active {
+      transform: scale(1.1) !important;
+    }
+  }
+
+  .brand {
+    font-size: 7.8rem !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo {
+    width: 60px !important;
+
+    img {
+      width: 60px;
+    }
+  }
+
+  .card .bg-image .share {
+    width: 30px !important;
+    height: 30px !important;
+
+    i {
+      line-height: 30px !important;
+      font-size: 0.8rem !important;
+    }
+  }
+
+  h1.big {
+    font-size: 1.4rem !important;
+  }
+
+  h3.small {
+    font-size: 1rem !important;
+  }
+
+  .text {
+    font-size: 0.9rem !important;
+  }
+
+  .new {
+    font-size: 0.9rem !important;
+    padding: 0 6px !important;
+  }
+
+  .buy {
+    border-radius: 6px !important;
+    i {
+      display: none !important;
+    }
+  }
+
+  .price {
+    font-size: 1rem !important;
+  }
+
+  .brand {
+    font-size: 6.5rem !important;
+  }
+}
